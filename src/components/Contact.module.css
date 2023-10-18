@@ -1,0 +1,30 @@
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: #000;
+    padding: .5em 0;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: whitesmoke;
+}
+
+.contact__details > p:first-child {
+    font-weight: 600;
+}
+
+.contact__details > p:nth-child(2) {
+    font-size: smaller;
+    color: grey;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+    .contact__details {
+        display: none;
+    }
+}

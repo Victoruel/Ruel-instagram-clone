@@ -1,0 +1,11 @@
+.postList {
+    flex: .6;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1111px) {
+	.postList {
+        flex: 1;
+        padding-right: 1em;
+    }
+}

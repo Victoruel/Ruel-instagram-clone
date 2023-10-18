@@ -1,0 +1,41 @@
+.login {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	border: 0.2rem solid red;
+	border-radius: 1rem;
+	padding: 1rem;
+	width: 700px;
+}
+
+.login__container > h1 {
+	text-align: center;
+}
+
+.login__container > img {
+	max-width: 100%;
+}
+
+.login__container > button {
+	font-size: large;
+	font-weight: 600;
+	padding: 0.5em 1em;
+	color: #fff;
+	background: linear-gradient(45deg, #ffbb52, #e35050, #604dc9);
+	border-radius: 3em;
+}
+
+@media only screen and (max-width: 750px) {
+	.login__container {
+		width: 90vw;
+	}
+}

@@ -1,0 +1,19 @@
+.home {
+    flex: .8;
+    display: flex;
+    gap: 1.5em;
+    padding-top: 2em;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1111px) {
+    .home {
+        flex: .95;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .home {
+        flex: 1;
+    }
+}

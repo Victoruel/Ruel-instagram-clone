@@ -1,0 +1,15 @@
+.AppLayout__body {
+    display: flex;
+    gap: 1em;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 650px) {
+	.AppLayout__body {
+        display: grid;
+        grid-template-rows: 95vh 5vh;
+        grid-template-columns: 100vw;
+        gap: 0;
+    }
+}

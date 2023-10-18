@@ -1,0 +1,50 @@
+.contacts {
+    flex: .3;
+    border-right: .15rem solid #eee;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.contacts svg {
+    color: #000;
+}
+
+.contacts__header {
+    position: sticky;
+    top: 0;
+    padding: .3em 1em;
+    margin-bottom: 1em;
+}
+
+.contacts__header_top, .contacts__header_bottom  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts__header_top {
+    margin-bottom: 1em;
+}
+
+.contacts__body {
+    max-height: 82%;
+    overflow-y: auto;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+    .contacts {
+        flex: .2;
+    }
+    .contacts__header {
+        border-bottom: .15em solid #eee ;
+    }
+    .contacts__header_top > h2  {
+        display: none;
+    }
+
+    .contacts__header_bottom {
+        display: none;
+    }
+}

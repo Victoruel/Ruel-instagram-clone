@@ -1,0 +1,203 @@
+.profile {
+	flex: 0.8;
+}
+
+.profile__header {
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
+}
+
+.profile__author > h2 {
+	margin-bottom: 1em;
+}
+
+.profile__stats {
+	display: flex;
+	gap: 1em;
+}
+
+.profile__actions {
+	margin-top: 2em;
+}
+
+.profile__actions > button{
+	text-transform: capitalize;
+	font-weight: bold;
+	margin-right: 1em;
+}
+
+.profile__body {
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-rows: repeat(auto-fit, minmax(10px, 250px)); */
+	grid-template-rows: repeat(auto-fit, 20vw);
+	gap: 0.2em;
+}
+
+.profile__body img {
+	width: 100%;
+	height: 100%;
+}
+
+.profile h2 {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+/* user Post */
+.userPost {
+	position: relative;
+	cursor: pointer;
+}
+
+.userPost__stats {
+	position: absolute;
+	top: -10%;
+	left: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	
+	display: none;
+	z-index: 1;
+	align-items: center;
+	gap: 1em;
+	/* transition: all 0.2s; */
+}
+
+.userPost:hover > img {
+	filter: blur(0.1rem);
+}
+
+.userPost:hover .userPost__stats {
+	display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+
+/* Post Modal styles */
+
+.modalPost {
+	width: 855px;
+	display: flex;
+	height: 80vh;
+}
+
+.modalPost__img {
+	display: inline-block;
+	width: 45%;
+	/* flex: .45; */
+	height: 100%;
+	border-radius: 0.5em 0 0 0.5em;
+}
+
+.modalPost__body {
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+}
+
+.modalPost__header {
+	position: sticky;
+	top: 0;
+	border-bottom: 0.15rem solid #eee;
+
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 1em;
+}
+
+.modalPost__header a {
+	color: #000;
+	font-weight: 600;
+}
+
+.modalPost__author {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.modalPost__comments {
+	padding: 0.5rem;
+	flex: 1;
+	/* height: 100%; */
+	overflow-y: auto;
+	width: 100%;
+}
+
+.modalPost__actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modalPost__actions svg {
+	color: #000;
+	font-size: larger;
+}
+
+.modalPost__likes {
+	padding-left: 1rem;
+}
+
+.modalPost__form {
+	border-top: 0.15rem solid #eee;
+	margin-top: 0.5rem;
+	width: 100%;
+}
+
+.modalPost__form > input {
+	padding: 1em 0.5em;
+	font-size: medium;
+	width: 100%;
+}
+
+.modalPost__form > button {
+	display: none;
+}
+
+/* Comment styles */
+/* .post__comment {
+	display: flex;
+	gap: 1em;
+	margin-top: 1em;
+	width: 100%;
+}
+
+.post__comment_body {
+	height: auto;
+	width: 100%;
+}
+
+.post__comment_body p {
+	width: 100%;
+}
+
+.post__comment_body span {
+	word-wrap: break-word;
+	white-space: inherit;
+} */
+
+/* Media queries */
+
+@media only screen and (max-width: 900px) {
+	.modalPost {
+		width: 93vw;
+		height: 80vh;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.modalPost__body {
+		width: 100%;
+	}
+
+	.modalPost__img {
+		display: none;
+	}
+}

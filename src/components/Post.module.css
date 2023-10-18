@@ -1,0 +1,187 @@
+.post {
+	border-bottom: 0.15rem solid #eee;
+	margin-bottom: 1em;
+}
+
+.post__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+.post__author {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+}
+
+.post__author a:first-child {
+	font-weight: 600;
+	color: #000;
+}
+
+.post__body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.post__img {
+	/* width: 468px; */
+	/* height: 468px; */
+	width: 100%;
+	height: 50vh;
+	border-radius: 0.5rem;
+}
+
+.post__actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.post__actions svg {
+	color: #000;
+}
+
+.post__viewComments {
+	cursor: pointer;
+}
+
+.post__form {
+	width: 100%;
+}
+
+.post__form > button {
+	display: none;
+}
+
+.post__form > input {
+	width: 100%;
+	font-size: medium;
+	padding: 0.3em 0;
+}
+
+/* Post Modal styles */
+
+.modalPost {
+	width: 855px;
+	display: flex;
+	height: 80vh;
+}
+
+.modalPost__img {
+	display: inline-block;
+	width: 45%;
+	/* flex: .45; */
+	height: 100%;
+	border-radius: 0.5em 0 0 0.5em;
+}
+
+.modalPost__body {
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+}
+
+.modalPost__header {
+	position: sticky;
+	top: 0;
+	border-bottom: 0.15rem solid #eee;
+
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 1em;
+}
+
+.modalPost__header a {
+	color: #000;
+	font-weight: 600;
+}
+
+.modalPost__author {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.modalPost__comments {
+	padding: 0.5rem;
+	flex: 1;
+	/* height: 100%; */
+	overflow-y: auto;
+	width: 100%;
+}
+
+.modalPost__actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modalPost__actions svg {
+	color: #000;
+	font-size: larger;
+}
+
+.modalPost__likes {
+	padding-left: 1rem;
+}
+
+.modalPost__form {
+	border-top: 0.15rem solid #eee;
+	margin-top: 0.5rem;
+	width: 100%;
+}
+
+.modalPost__form > input {
+	padding: 1em 0.5em;
+	font-size: medium;
+	width: 100%;
+}
+
+.modalPost__form > button {
+	display: none;
+}
+
+/* Comment styles */
+.post__comment {
+	display: flex;
+	gap: 1em;
+	margin-top: 1em;
+	width: 100%;
+}
+
+.post__comment_body {
+	height: auto;
+	width: 100%;
+}
+
+.post__comment_body p {
+	width: 100%;
+}
+
+.post__comment_body span {
+	word-wrap: break-word;
+	white-space: inherit;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 900px) {
+	.modalPost {
+		width: 93vw;
+		height: 80vh;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.modalPost__body {
+		width: 100%;
+	}
+
+	.modalPost__img {
+		display: none;
+	}
+}

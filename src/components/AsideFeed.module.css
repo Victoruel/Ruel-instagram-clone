@@ -1,0 +1,56 @@
+.asideFeed {
+	flex: .4;
+	padding: 0em 2em 0 2em;
+}
+
+.asideFeed__header {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-bottom: 2em;
+}
+
+.asideFeed__header p:first-child {
+	font-weight: 600;
+	color: #000;
+}
+
+.asideFeed__header p:nth-child(2) {
+	color: grey;
+}
+
+/* Account summary styles */
+.accountSummary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.accountSummary__user {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.accountSummary__user p:first-of-type {
+	font-weight: 600;
+	color: #000;
+}
+
+.accountSummary__user p:nth-child(2) {
+	color: grey;
+}
+
+.accountSummary button {
+	text-transform: capitalize;
+	border-radius: 2em;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 960px) {
+	.asideFeed {
+		display: none;
+	}
+}
+

@@ -1,0 +1,173 @@
+.sidebar {
+	height: 100vh;
+	flex: 0.2;
+	position: sticky;
+	top: 0;
+	border-right: 0.15rem solid #dbdbdb;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.sidebar__logo {
+	width: 8em;
+}
+
+.sidebar__options {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	width: 100%;
+}
+
+.sidebar__option {
+	padding: 0.3em 1em;
+	transition: all 0.2s;
+	color: #000000;
+}
+
+.sidebar__option:hover {
+	background-color: #eee;
+}
+
+.sidebar__option svg {
+	color: #000;
+	transition: all 0.2s;
+	font-size: larger;
+}
+
+.sidebar__option:hover svg {
+	transform: scale(1.2);
+}
+
+.createModal,
+.createModal > form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 480px;
+}
+
+.createModal__header {
+	border-bottom: 0.12rem solid lightgrey;
+	padding: 0.5em 0;
+	text-align: center;
+}
+
+.createModal > form > input,
+.createModal > form > textarea {
+	font-size: medium;
+	padding: 0.3rem 0.5rem;
+	width: 100%;
+	border-bottom: 0.1rem solid #ddd;
+}
+
+.createModal > form {
+	align-items: center;
+}
+
+.createModal > form > button {
+	padding: 0.5rem 1.5em;
+	font-size: medium;
+	background-color: #0095f6;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 0.5rem;
+	margin-bottom: 0.5em;
+}
+
+.createModal__error {
+	width: 100%;
+	padding-right: 1em;
+	color: red;
+	text-align: right;
+}
+
+.sidebar__mini {
+	height: 100vh;
+	flex: 0.05;
+	position: sticky;
+	top: 0;
+	border-right: 0.15rem solid #dbdbdb;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.sidebar__mini .sidebar__logo {
+	width: 3.5em;
+	object-fit: cover;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1111px) {
+	.sidebar__option span {
+		display: none;
+	}
+
+	.sidebar {
+		height: 100vh;
+		flex: 0.05;
+		position: sticky;
+		top: 0;
+		border-right: 0.15rem solid #dbdbdb;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.sidebar__logo {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.sidebar__mini,
+	.sidebar {
+		flex: none;
+		grid-row: 2 / 3;
+		position: fixed;
+		top: 90%;
+		background-color: #fff;
+		z-index: 1000;
+		border-top: 0.15rem solid #dbdbdb;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 100vw;
+		height: fit-content;
+	}
+
+	.sidebar__options {
+		flex: 1;
+		flex-direction: row;
+		gap: 0em;
+		width: fit-content;
+	}
+
+	.sidebar__option {
+		padding: 0.3em 0.5em;
+	}
+
+	.sidebar__logo {
+		display: none;
+	}
+
+	.createModal,
+	.createModal > form {
+		flex-direction: column;
+		gap: 0.5rem;
+		width: 77vw;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.sidebar__option:nth-child(2),
+	.sidebar__option:nth-child(4),
+	.sidebar__option:nth-child(6) {
+		display: none;
+	}
+}
